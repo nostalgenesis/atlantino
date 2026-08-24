@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlantino</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <button id="reopenBtn" title="Apri pannello">☰</button>
+
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div>
+        <h1>Atlantino</h1>
+        <div class="subtitle">Una mappa aperta e personalizzabile <br>per aspiranti guide turistiche</div>
+      </div>
+      <button id="collapseBtn" title="Comprimi pannello">‹</button>
+    </div>
+
+    <div class="search-bar-wrap">
+      <input type="text" id="siteSearchInput" class="search-input" placeholder="🔍 Cerca sito nella lista...">
+    </div>
+
+    <div class="sidebar-scroll">
+
+      <div class="panel">
+        <h2>Modalità ripasso</h2>
+        <div class="row">
+          <div>
+            <div class="row-label">Nascondi i nomi dei luoghi</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="hideTooltipsToggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Mostra elementi secondari</h2>
+        <div class="row">
+          <div class="row-label">Mostra elementi secondari</div>
+          <label class="switch">
+            <input type="checkbox" id="showSecondaryToggle" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="panel">
+        <h2>I miei luoghi</h2>
+        <div class="row" style="margin-top:14px;margin-bottom:6px;">
+          <div class="row-label" style="font-weight:600;">I miei luoghi</div>
+          <span class="row-hint" id="siteCountBadge"></span>
+        </div>
+        <div class="btn-row">
+          <button class="btn" id="showAllSitesBtn" type="button">👁️ Mostra tutti</button>
+          <button class="btn" id="hideAllSitesBtn" type="button">🙈 Nascondi tutti</button>
+        </div>
+        <div class="site-list" id="siteList"></div>
+      </div>
+    </div>
+
+    <div class="panel sticky-bottom">
+        <h2>Mappa</h2>
+        <button class="btn primary" id="exportBtn">⬇ Esporta la tua mappa</button>
+        <button class="btn" id="importBtn">⬆ Importa una mappa</button>
+        <input type="file" id="importFile" accept="application/json" style="display:none;">
+        <button class="btn danger-outline" id="resetBtn">🗑 Svuota tutta la mappa</button>
+      </div>
+
+    <div class="stats-footer">
+      <span>Siti: <b id="statSites">0</b></span>
+      <span>Punti: <b id="statPoints">0</b></span>
+    </div>
+  </aside>
+
+  <div id="mapWrap">
+    <div class="map-tip">Clicca sulla mappa per aggiungere un elemento</div>
+    <div id="map"></div>
+  </div>
+</div>
+
+<!-- ===== MODAL CREAZIONE / MODIFICA ===== -->
+<div id="modalOverlay">
+  <div id="modalCard">
+    <div class="modal-head">
+      <h3 id="modalTitle">Nuovo elemento</h3>
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+    </div>
+    <div class="modal-body">
+      <form id="pointForm">
+        <div class="field" id="pointNameField">
+          <label for="pointName">Nome dell'elemento</label>
+          <input type="text" id="pointName" placeholder="Es. Anfiteatro, Domus del Mosaico...">
+        </div>
+
+        <div class="field" id="siteSelectField">
+          <label for="siteSelect">Sito principale:</label>
+          <select id="siteSelect">
+            <option value="__new__">➕ Crea nuovo sito...</option>
+          </select>
+        </div>
+
+        <div class="field" id="newSiteFields">
+          <label for="newSiteName">Nome del nuovo sito</label>
+          <input type="text" id="newSiteName" placeholder="Es. Alba Fucens">
+          <label style="margin-top:12px;">Colore del sito</label>
+          <div class="swatch-grid" id="colorSwatchGrid"></div>
+        </div>
+
+        <div class="field">
+          <label for="pointNotes">Note (storia, date, dettagli utili al concorso)</label>
+          <textarea id="pointNotes" placeholder="Annotazioni storiche, periodo, curiosità..."></textarea>
+        </div>
+
+        <div class="coord-readout" id="coordReadout"></div>
+
+        <div class="modal-actions" style="margin-top:18px;">
+          <button type="button" class="btn danger-outline" id="deleteFromModalBtn" style="display:none;">Elimina</button>
+          <button type="submit" class="btn primary">Salva</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
