@@ -83,6 +83,31 @@
 
   function getSite(id) { return sites.find(s => s.id === id); }
 
+  /* Cancellazione "a cascata": se il punto è il sito stesso (principale),
+     elimina l'intero sito e tutti i suoi punti collegati, replicando
+     il comportamento del pulsante ✕ nella sidebar. Se è secondario,
+     elimina solo quel punto. */
+  function deletePointCascade(id) {
+    const point = points.find(p => p.id === id);
+    if (!point) return;
+
+    if (point.importance === 'principale') {
+      const site = getSite(point.siteId);
+      const label = site ? site.name : point.name;
+      if (!confirm(`Eliminare il sito "${label}" e tutti i suoi elementi collegati?`)) return;
+      sites = sites.filter(s => s.id !== point.siteId);
+      points = points.filter(p => p.siteId !== point.siteId);
+    } else {
+      if (!confirm('Eliminare definitivamente questo elemento?')) return;
+      points = points.filter(p => p.id !== id);
+    }
+
+    saveState();
+    renderSiteList();
+    renderAllMarkers();
+    updateStats();
+  }
+
   /* ============================================================
      PERSISTENZA — LocalStorage + Export/Import JSON
   ============================================================ */
@@ -533,12 +558,7 @@
 
   deleteFromModalBtn.addEventListener('click', () => {
     if (!editingPointId) return;
-    if (!confirm('Eliminare definitivamente questo elemento?')) return;
-    points = points.filter(p => p.id !== editingPointId);
-    saveState();
-    renderSiteList();
-    renderAllMarkers();
-    updateStats();
+    deletePointCascade(editingPointId);
     closeModal();
   });
 
@@ -562,13 +582,8 @@
       if (point) openEditModal(point);
     },
     deletePoint: function (id) {
-      if (!confirm('Eliminare definitivamente questo elemento?')) return;
-      points = points.filter(p => p.id !== id);
       map.closePopup();
-      saveState();
-      renderSiteList();
-      renderAllMarkers();
-      updateStats();
+      deletePointCascade(id);
     }
   };
 
