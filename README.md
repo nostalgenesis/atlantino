@@ -5,8 +5,7 @@ Di fronte alla [vastità del programma di studio](https://portale.inpa.gov.it/ap
 
 ## Come usarlo?
 
-Non si tratta di una mappa pronta per l'uso, bensì di uno strumento con cui creare agilmente la tua mappa personale nella maniera che più si confà al tuo metodo di studio, memorizzazione e ripasso. 
-Si basa tutto sul principio della visualizzazione:
+Non si tratta di una mappa pronta per l'uso, bensì di uno strumento con cui creare agilmente la tua mappa personale nella maniera che più si confà al tuo metodo di studio, memorizzazione e ripasso. Si basa tutto sul principio della visualizzazione:
 1. sulla mappa piazzerai i tuoi segnaposto, a cui assegnerai nomi e colori;
 2. in qualsiasi momento potrai cambiare visuale tra cartina parlante, immagine satellitare e cartina muta.
 
@@ -36,22 +35,16 @@ La visualizzazione dinamica e l'interattività delle mappe sono rese possibili d
 
 ## Filosofia del progetto e contributi
 
-Non ho voluto creare una mappa e basta, ma una mappa personalizzabile da ciascuno 
-in base alle proprie necessità per il proprio studio, giocando con pochi elementi minimi:
+Non ho voluto creare una mappa e basta, ma una mappa personalizzabile da ciascuno in base alle proprie necessità per il proprio studio, giocando con pochi elementi minimi:
 - la gerarchia tra marker principali e secondari;
 - le note di testo;
 - la condivisibilità dei file delle mappe.
-- 
+
 L'Atlantino è pensato appositamente come strumento di studio, ma essendo lo studio qualcosa di altamente personale (e poco prevedibile), immagino che qualcuno troverà modalità d'utilizzo molto diverse da quelle da me immaginate e preventivate. Per questo, il progetto è open source e ogni commento, feedback o contributo (sia come miglioramento che come suggerimento) sarà enormemente gradito e ben accetto.
 
 ## IMPORTANTE: Uso dei dati
 
-I dati vengono salvati localmente nel browser. **Se viene 
-cancellata la cache e i dati non sono stati scaricati, essi andranno perduti**. 
-Puoi esportare la tua mappa come JSON e reimportarla
-in un secondo momento o su un altro browser.
-L'importazione di mappe o file JSON creati da terzi 
-avviene sotto la diretta responsabilità dell'utente.
+I dati vengono salvati localmente nel browser. **Se viene cancellata la cache e i dati non sono stati scaricati, essi andranno perduti**. Puoi esportare la tua mappa come JSON e reimportarla in un secondo momento o su un altro browser. L'importazione di mappe o file JSON creati da terzi avviene sotto la diretta responsabilità dell'utente.
 
 ## Licenza
 
