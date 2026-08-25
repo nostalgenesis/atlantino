@@ -1,7 +1,6 @@
 # Atlantino
 
-L'***Atlantino*** è uno strumento pensato come ausilio per lo studio, la memorizzazione e il ripasso delle svariate decine di siti e luoghi d'Italia su cui verte l'esame del [concorso nazionale da guida turistica del 2026](https://www.inpa.gov.it/bandi-e-avvisi/dettaglio-bando-avviso/?concorso_id=4eed076c847741c493ad9702ff78f6d6). 
-Di fronte alla [vastità del programma di studio](https://portale.inpa.gov.it/api/media/d479ec81-a12a-4357-b574-efdea8763846) ho deciso di rimboccarmi le maniche e ho fatto un esperimento di vibe-coding con Sonnet 5 (Anthropic) risultato in un'app utile per la memorizzazione di punti geografici, che metto a disposizione dei colleghi esaminandi e di chiunque possa essere interessato. 
+L'***Atlantino*** è uno strumento pensato per lo studio, la memorizzazione e il ripasso [dei siti e dei luoghi d'Italia](https://portale.inpa.gov.it/api/media/d479ec81-a12a-4357-b574-efdea8763846) previsti per l'[esame di conseguimento dell’abilitazione all’esercizio della professione di guida turistica (2026)](https://www.inpa.gov.it/bandi-e-avvisi/dettaglio-bando-avviso/?concorso_id=4eed076c847741c493ad9702ff78f6d6). Per affiancare allo studio teorico anche uno cartografico, ho sviluppato questa web app come esperimento di vibe-coding con Claude Sonnet 5 (Anthropic), pensando a uno spazio di lavoro in cui visualizzare e personalizzare la propria mappa. È uno strumento aperto e libero che spero possa essere utile per i colleghi esaminandi e per chiunque voglia organizzare lo studio del territorio.
 
 ## Come usarlo?
 
