@@ -5,10 +5,10 @@ L'***Atlantino*** è uno strumento pensato per lo studio, la memorizzazione e il
 ## Come usarlo?
 
 **Non si tratta di una mappa pronta per l'uso**, bensì di **uno strumento con cui creare agilmente la tua mappa personale** nella maniera che più si confà al tuo metodo e stile di studio, memorizzazione e ripasso. Si basa tutto sul principio della visualizzazione:
-1. sulla mappa piazzerai i tuoi segnaposto, a cui assegnerai nomi e colori;
-2. in qualsiasi momento potrai cambiare visuale tra cartina parlante, immagine satellitare e cartina muta.
+1. sulla mappa piazzerai **i tuoi segnaposto**, a cui assegnerai nomi, colori ed eventuali note di testo;
+2. in qualsiasi momento potrai cambiare visuale tra **cartina parlante, immagine satellitare e cartina muta**.
 
-Puoi usare l'***Atlantino*** [cliccando qui](https://nostalgenesis.github.io/atlantino/) oppure scaricando i file di questa repository e aprendo l'*index.html* altrove.
+Puoi usare l'***Atlantino*** [cliccando qui](https://nostalgenesis.github.io/atlantino/) oppure servendoti dei file di questa repository e aprendo l'*index.html* altrove.
 
 ## Segnaposto
 I segnaposto sono pallini di diversi colori con cui segnare i punti sulla mappa. Cliccando su un punto della mappa si aprirà una finestra che permette di personalizzare il segnaposto, dandogli un nome, un colore e inserendo dentro di esso eventuali note. Nomi, colori e note sono modificabili **in qualsiasi momento** anche dopo la loro creazione.
@@ -43,7 +43,7 @@ L'***Atlantino*** è pensato appositamente come strumento di studio: essendo lo 
 
 ## IMPORTANTE: uso dei dati
 
-I dati vengono salvati localmente nel browser. **Se viene cancellata la cache e i dati non sono stati scaricati, essi andranno perduti**. Puoi esportare la tua mappa come JSON e reimportarla in un secondo momento o su un altro browser. **L'importazione di mappe o file JSON creati da terzi avviene sotto la diretta responsabilità dell'utente.**
+I dati vengono salvati localmente nel browser. **Se viene cancellata la cache e i dati non sono stati scaricati, essi andranno perduti**. Puoi esportare la tua mappa come JSON e reimportarla in un secondo momento, su un altro browser. I file JSON esportati possono essere inviati anche ad altre persone. **L'importazione di mappe o file JSON creati da terzi avviene sotto la diretta responsabilità dell'utente.**
 
 ## Licenza
 
